@@ -238,24 +238,34 @@
     <div class="optional-section background-alt">
 	    <h2 class="heading">Research</h2>
 	    	<div class="optional-section-block">
-			<h3>Compressed Air Energy Storage (CAES) technology for large-scale energy storage </h3>
+			<h3>Affordable large-scale and long-scale Grid-Scale Electrical and Thermal Energy Storage</h3>
 			<center>
 				<img src='images/caes_system.jpg'>	
 			</center>
-
+			<ul>
 			<li>
-				Adiabatic CAES (A-CAES) system with packed bed Thermal Energy Storage (PBTES) tanks
+			Compressed Air Energy Storage (CAES) is the cheapest large-scale energy storage technology.
 			</li>
+			<li>
+			Thermal Energy Storage (TES) integrated adiabatic CAES (A-CAES) creates the new generation carbon-free storage technology.
+			</li>
+			<li>
+			The developed CAES-TES toolbox enables dynamic modeling of all multi-physical components, and track the time-variant system responses arising from various mechanical (compressors and expanders), thermal (heat exchangers and thermal reservoirs), and electrical (motor and generator) components.
+			</li>
+			</ul>
 			<p></p>
 			<center>
 				<img src='images/pbtes_pcm.jpg'>
 			</center>
+			<ul>
 			<li>
 				PBTES tank with phase change material (PCM) fillings
 			</li>
 			<li>
 				The time-resolved simulation indicated a higher steady-state cycle efficiency of 56.5% for the system with the PCM-filled PBTES, versus 53.2% of the system with the rock-filled PBTES.
-				</li>
+			</li>
+			</ul>
+			Features: large-scale energy storage, fluid/thermal dynamics, dynamic modeling/analysis,multi-physics, toolbox development
 	<!-- End. .research-block -->
 		</div>
 
@@ -269,26 +279,36 @@
 	</p>
         <ul>
 	    <li>
+		 The liquid and gas phases fo water disappear during ultra supercritical (USC) steam generation, which results in a more efficient steam cycle. USC power plant is friendly to the environment with less fuel/reagent consumption, less solid waste and water use.
+	    </li>
+	    <li>
+		    Circulating fluidized bed (CFB) boiler significantly increases the fuel efficiency of a power plant to generate electricity.
+	    </li>
+	    <li>
 	The power plant system can be decoupled as the combustion system of the boiler and water-steam system based on Rankine cycle of other downstream components.
             </li>
-            <li>
-                Zone-based model of the boiler fits well multi-scale modeling of the power plant simulation and the internal temperature distribution copmutation of the combustor.
-            </li>
-	    <li>
-		Features: multi-scale modeling, multi-phase flow, combustion kinetics heat transfer, energy conservation
-            </li>
-        </ul>
+       </ul>
 	<center>
 	<img src='images/CFB_boiler.png'>
 	</center>
 	<p></p>
 	<ul>
 	     <li>
+	To optimize and control the CFB, a dynamic CFB model is developed. The CFB modeling is built on a multi-scale framework by simulating internal flow and temperature fields of every sub-systems (combustor, water-wall, etc.), and assembling the multi-physics to the system-level power plant performance matrix.
+	    </li>
+            <li>
+	    This Zone-based model is used to optimize process operation strategies for higher efficiencies and better fuel flexibility.
+            </li>
+             <li>
 	          Convection: 1) gas-wall (furnace side); 2) wall-water (water side)
 	     </li>
 	      <li>
                   Radiation: gas-gas and gas-wall (inside boiler)
 	      </li>
+	      </ul>
+
+	      Features: multi-scale modeling, multi-phase flow, combustion kinetics, heat transfer, energy conservation
+ 
 	   <!--<li>
 		  The number of computational nodes = 2 * (N * M + N * L + M * L)<span lang="latex">\frac{1+sin(x)}{x^3}</span>
 	   </li> -->
@@ -302,74 +322,92 @@
 	<p></p>
         <ul>
 		<li>
-		Reverse osmosis (RO), producing water with external work, is the most energy-efficient and widely utilised mature desalination technology currently.
+			Water desalination creates an alternative drinking water source to solve the global water challenges, but its high energy consumption leads to a high cost of the drinking water production.
 		</li>
 		<li>
-		Osmotic energy harvest using pressure retarded osmosis (PRO) and its application in desalination is promising to deal with  problems in Water-Energy-Environment Nexus
-		</li>
-		<li>
-		Forward osmosis (FO) process is driven by the osmotic pressure gradient without external work.
-		</li>
-		<li>
-		Features: clean/green energy technology, sustainable energy system, energy storage
+			Reverse osmosis (RO) is the most utilized technology at the moment around the world, forward osmosis (FO) and pressure retarded osmosis (PRO) are promising technologies to significantly reduce the energy consumption in desalination for a lower water cost.
 		</li>
 	</ul>
+Features: clean/green energy technology, sustainable energy system, energy storage
+	<!-- End. .research-block -->
+		</div>
 
 
-        <h3>Computational Fluid Dynamics in Membrane Process Modelling</h3>
-	<h4>1. Membrane module for permeabel boundary condition</h4>
+	<div class="optional-section-block"> 
+        <h3>Modeling in Membrane Process</h3>
+	<ul>
+		The performance of a membrane module is determined by the complex flow inside the membrane flow channels and the mass transfers across the membranes. The coupled effects build the difficulty to either predict the performance or optimize the desalination system. What my research focus on include both system-level optimization and the detailed flow dynamics and mass transfer inside the module.
+	</ul>
+	<h4>1. Membrane module/stack model</h4>
 	<center>
 	<img src='images/ro_module_copy.png'>
 	</center>
 	<p></p>
 	<ul>
 		<li>
-	            The coupled effects between the nonlinear feed flow and the mass transfer of both water and salts across the membrane are considered in a coupled CFD-based modeling.
+	       Membrane module/stack models are powerful tools to optimize the mechanical design of the module/stack and the system.
+	       </li>
+		<li>
+	            The coupled effects between the nonlinear feed flow and the mass transfer of both water and salts across the membrane are considered in a coupled CFD-based modeling. These models that are validated with experimental data.
 		</li>
 		<li>
 		    Concentration polarisation (CP) effects negatively the mass transport cross the membrane, which can be diminished by reducing the thinkness of boundary layer.
             	</li>
 	</ul>
-	<h4>2. Modeling in spacer promoted channel flow</h4>
-	<center>
+	<h4>2. Computational fluid dynamics (CFD) modelling of spacer-promoted channel flow</h4>
+	<ul>
+	 I developed a CFD spacer-promoted flow model in OpenFOAM and in-house code GPDE, and verified the codes with experimental data. The developed CFD model will precisely simulate the complex flow and mass transfer coupling to improve the scaled-up system model and the understanding of the scaled-down micro-channel flow dynamics.
+	</ul>
+	 <center>
 	<img src='images/mem_proc_channel.png'>
 	</center>
 	<p></p>
         <ul>
 	    <li>
-	       Spacers/filaments improve the permeation by interuputing the boudnary layer and enhancing the flow mixing, but also result in additional pressure loss.
+	       Spacers/filaments improve the permeation by interrupting the boundary layer and enhancing the flow mixing, but also result in additional pressure loss.
 	    </li>
 	    <li>
 	      Solute consentration (passive scalar in the flow field) is balanced by its convection, diffusion and source. 
 	    </li>
-            <li>
-              Features: multi-physics modeling, mass/species transfer
-           </li>
-        </ul>
-	<h4>3. Sensitivity analysis and gradien-based shape optimisation using discrete adjoint method </h4>
+            </ul>
+
+	    <h4>3. Gradient-based optimization of spacer shape</h4>
+	<ul>
+Current optimisation methods are mainly based on try-and-error. I developed a new framework of gradient-based shape optimization of spacer design loop via using discrete adjoint approach. 
+	</ul>
 	<center>
 	<img src='images/sensitivities.png'>
 	</center>
+	<ul>
+	       <li>
+	     The trade-off between pressure loss and water permeation (indicated in the sensitivity distribution) increase challenges of the spacer design in membrane channels. 
+             </li>
+	      <li>
+         	  The discrete adjoint method (for sensitivity computation) will significantly reduce the convergence iteration time for guarantee an optimal design.
+		     </li>
+
+	</ul>
 	<p></p>
 	<center>
 	<img src='images/streamline_opt.png'>
 	</center>
 	<ul>
 	     <li>
-		 The trade-off relationship between permeate flux and pressure drop is indicated by the sensitivities distribution. 
-             </li>
-	     <li>
 		 Compared to the standard zigzag spacer design, the optimal spacer reduces pressure loss by 24% with a permeation drop in the flow channel of only 0.43%.
 	     </li>
 	      <li>
                  Gradient-based optimisation using discrete adjoint approach allows spacer shape design with more complex geometries.
-      </li>
+      	     </li>
+	 </ul>
+            
+              Features: multi-physics modeling, Computational Fluid Dynamics, mass/species transfer, gradient-based optimisation
     </div>
      <!-- End .optional-section-block -->
 	 <div class="optional-section-block">
-        <h3>Solver development of in-house CFD-Adjoint tools </h3>
-	Goals achieved:
-	<li>
+        <h3>CAD-based shape optimisation via discrete adjoint solver derived from CFD codes</h3>
+       <h4> Solver development of in-house CFD-Adjoint tools:</h4>
+	<ul>
+       <li>
 		Accuracy improvement: residual reduced by 1 order of magnitude
 	</li>
 	<li>
@@ -381,17 +419,22 @@
 	<li>
 		Stablisation of both of the flow solvers and counterpart adjoint solvers
 	</li>
+	</ul>
 	<p></p>
+	<h4>CAD-based shape optimisation</h4>
 	<center>
 	<img src='images/nurbs_patch.png'>
 	</center>
+	<ul>
 	<li>
 	CAD-based parametrisation via Non-uniform rational basis spline (NURBS) patches
 	</li>
+	</ul>
 	<p></p>
 	<center>
 	<img src='images/s_bend_patch.png'>
 	</center>
+	<ul>
 	<li>
 		The air duct in Volkswagen Golf vehicle is optimised to reduce pressure drop/loss.
 	</li>
@@ -401,23 +444,29 @@
 	<li>
 		In-house CAD tool, NsPCC (NURBS-based parametrisa-tion with continuity constraints) guarantees G1 (1th order) and G2 (2st order) geometry continuity at interfaces.
 	</li>
+	</ul>
 	<p></p>
 	<center>
 	<img src='images/dean_vort.png'>
 	</center>
+	<ul>
 	<li>
 		Dean vortices in curvature duct lead to energy loss.
 	</li>
+	</ul>
 	<center>
 	<img src='images/s-bend.png'>
 	</center>
+	<ul>
 	<li>
 		The optimised shape suppresses the secondary flow motion.
 	</li>
 	<li>
 		Pressure drop from the optimised S-bend duct is reduced by ~20% compared with base-line design.
 	</li>
+	</ul>
 
+	Features: CFD software development, Automatic Differentation, CAD-based parametrisation, shape optimisation 
 	 </div>
      <!-- End .optional-section-block -->
 
